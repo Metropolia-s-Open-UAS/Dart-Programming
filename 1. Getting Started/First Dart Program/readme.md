@@ -26,5 +26,5 @@ void main() {
 - The command `dart create` is used to generate a full Dart project structure. This is needed with larger projects that might involve multiple files, dependencies, or when you plan to grow the codebase over time. We will use that later in this course.
 - For native platforms, Dart features the **Dart VM** with **Just-in-Time (JIT)** compilation, which is ideal for the development phase as it supports live metrics collection and debugging. For production, Dart provides an **Ahead-of-Time (AOT)** compiler that generates optimized machine code.
 - For web platforms, Dart offers a web compiler that translates Dart code into **JavaScript** or **WebAssembly**.
-
+<img link="https://github.com/Metropolia-s-Open-UAS/media/blob/main/Dart%20Programming/1_CyYItwsm4bEEBrYB7HLhOQ.webp" ></img>
 
