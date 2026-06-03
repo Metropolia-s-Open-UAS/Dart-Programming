@@ -77,6 +77,64 @@ Uppercase: HELLO WORLD
 Lowercase: hello world
 ```
 
+#### String Creation & Basic Operations
+
+| Concept | Syntax / Method | Description | Example |
+|---------|----------------|-------------|---------|
+| Single quotes | `'text'` | Creates a string using single quotes | `'Hello Dart!'` |
+| Double quotes | `"text"` | Creates a string using double quotes | `"Hello Dart!"` |
+| Character access | `[index]` | Accesses character at zero-based index | `s1[4]` → `'o'` |
+| Concatenation | `+` operator | Joins strings together | `'Hello ' + 'world'` |
+| Multiline string | `'''...'''` or `"""..."""` | Creates a string spanning multiple lines | `'''This is\nmultiline'''` |
+| StringBuffer | `StringBuffer()` | Efficient for building large strings programmatically | `buffer.write('Hello');` |
+
+#### Useful String Methods
+
+| Method | Description | Example | Output |
+|--------|-------------|---------|--------|
+| `contains(substring)` | Checks if string contains a substring | `'Hello world'.contains('world')` | `true` |
+| `startsWith(prefix)` | Checks if string starts with given prefix | `'Hello world'.startsWith('Hello')` | `true` |
+| `endsWith(suffix)` | Checks if string ends with given suffix | `'Hello world'.endsWith('world')` | `true` |
+| `indexOf(substring)` | Finds first occurrence index of substring | `'Hello world'.indexOf('world')` | `6` |
+| `replaceAll(old, new)` | Replaces all occurrences of a substring | `'Hello world'.replaceAll('world', 'Dart')` | `'Hello Dart'` |
+| `toUpperCase()` | Converts entire string to uppercase | `'Hello'.toUpperCase()` | `'HELLO'` |
+| `toLowerCase()` | Converts entire string to lowercase | `'Hello'.toLowerCase()` | `'hello'` |
+
+#### StringBuffer Example Breakdown
+
+| Step | Code | Description |
+|------|------|-------------|
+| 1 | `StringBuffer buffer = StringBuffer();` | Create empty StringBuffer |
+| 2 | `buffer.write('Hello');` | Add first string |
+| 3 | `buffer.write(' ');` | Add space |
+| 4 | `buffer.write('world');` | Add last string |
+| 5 | `String result = buffer.toString();` | Generate final string |
+| 6 | `print(result);` | Output: `Hello world` |
+
+#### Complete Example Output
+
+```dart
+String s = "Hello world";
+```
+
+| Method Call | Output |
+|-------------|--------|
+| `s.contains('world')` | `true` |
+| `s.startsWith('Hello')` | `true` |
+| `s.endsWith('world')` | `true` |
+| `s.indexOf('world')` | `6` |
+| `s.replaceAll('world', 'Dart')` | `Hello Dart` |
+| `s.toUpperCase()` | `HELLO WORLD` |
+| `s.toLowerCase()` | `hello world` |
+
+#### Key Notes
+
+| Note | Explanation |
+|------|-------------|
+| UTF-16 encoding | Strings are sequences of UTF-16 code units in Dart |
+| Zero-based indexing | First character is at index `0` |
+| StringBuffer performance | More efficient than `+` concatenation for multiple operations |
+| Triple quotes for multiline | Can use either `'''` or `"""` |
 
 
 
