@@ -31,5 +31,57 @@ final int maxValue = 1000;
 ```dart
 const pi = 3.14159;
 ```
+You will get an error if you try to set const value at runtime.
+```dart
+const currentTimeConst = DateTime.now(); // Error
+final currentTimeFinal = DateTime.now(); // This works
+```
+When the value is known at compile time, you should use `const`.
+> **NOTE!** In quite many programming languages constants are named using `UPPER_CASE syntax`. In Dart, it is recommended to use `lowerCamelCase` also with `constants`.
+- The `late` keyword allows you to initialize a variable later when it's needed.
+This can be useful when you're sure the variable will be assigned before it's used, but you can't initialize it immediately.
+```dart
+late String description;
+description = 'This is a late-initialized variable';
+```
+You can print the value of a variable to console using the print() function:
+```dart
+void main() {
+  var age = 25
+  print(age); // This prints: 25
+}
+```
+To print variable with text, you can use **string interpolation**. Dart supports **string interpolation** with the `$` symbol strings:
+```dart
+void main() {
+  var name = 'Mary';
+  var age = 25;
+  print('Name: $name, Age: $age');
+}
+```
+```text
+The output is: Name: Mary, Age: 25
+```
+> You can also include expressions by wrapping it in `${...}`:
+```dart
+void main() {
+  var num1 = 5;
+  var num2 = 15;
+  print('The sum of $num1 and $num2 is ${num1 + num2}');
+}
+```
+```text
+The output is: The sum of 5 and 15 is 20
+```
+
+
+
+
+
+
+
+
+
+
 
 
