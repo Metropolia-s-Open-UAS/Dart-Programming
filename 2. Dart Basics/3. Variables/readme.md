@@ -73,7 +73,30 @@ void main() {
 ```text
 The output is: The sum of 5 and 15 is 20
 ```
+Here is a table summarizing Dart variable declaration and usage concepts:
 
+| Concept | Keyword / Feature | Description | Example |
+|---------|------------------|-------------|---------|
+| Variable declaration | `var` | Automatically infers the data type from the assigned value (type fixed at compile time) | `var name = 'Mary';` |
+| Explicit type declaration | `String`, `int`, `bool`, `num`, etc. | Declares variable with a specific data type | `String name = 'Mary';` |
+| Runtime constant | `final` | Variable can be set only once (at runtime) | `final maxValue = 1000;` |
+| Compile-time constant | `const` | Value must be known at compile time | `const pi = 3.14159;` |
+| Late initialization | `late` | Defers initialization until variable is first used | `late String description;` |
+| Naming convention (constants) | `lowerCamelCase` | Even constants use lower camelCase in Dart (not UPPER_CASE) | `const pi = 3.14159;` |
+| Output to console | `print()` | Prints value to the console | `print(age);` |
+| String interpolation (simple) | `$variable` | Inserts variable value into a string | `'Name: $name'` |
+| String interpolation (expression) | `${expression}` | Inserts result of an expression into a string | `'Sum: ${num1 + num2}'` |
+
+**Key rules & notes:**
+
+| Rule / Note | Example / Explanation |
+|-------------|----------------------|
+| `var` type cannot change after inference | `var name = 'Mary';`<br>`name = 10;` // ❌ Compile error |
+| `final` can be set at runtime | `final time = DateTime.now();` // ✅ Works |
+| `const` must be compile-time constant | `const time = DateTime.now();` // ❌ Error |
+| Use `const` when value is known at compile time | `const double gravities = 9.8;` |
+| Use `final` when value is set once but at runtime | `final userId = getUserInput();` |
+| `late` useful for non-nullable variables initialized later | `late String temp;`<br>`temp = 'warm';` // ✅ Valid |
 
 
 
